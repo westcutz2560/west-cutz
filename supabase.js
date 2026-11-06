@@ -5,7 +5,7 @@ const SUPABASE_KEY = "sb_publishable_1YAgb1SKtCUB6WFCa9uxKg_89nDjo8T"
 fetch(SUPABASE_URL + '/rest/v1/barbeiros?select=nome', {
   headers: { apikey: SUPABASE_KEY }
 })
-.then(resposta => {
+.then(async resposta => {
   if (!resposta.ok) throw new Error('Erro ' + resposta.status);
   return resposta.json();
 })
