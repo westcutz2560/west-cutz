@@ -6,7 +6,7 @@ fetch(SUPABASE_URL + '/rest/v1/barbeiros?select=nome', {
   headers: { apikey: SUPABASE_KEY }
 })
 .then(async resposta => {
-  if (!resposta.ok) throw new Error('Erro ' + resposta.status);
+if (!resposta.ok) throw new Error('Erro ' + resposta.status + ': ' + await resposta.text());
   return resposta.json();
 })
 .then(dados => {
