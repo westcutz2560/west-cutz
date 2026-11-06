@@ -1,6 +1,6 @@
 const SUPABASE_URL = "https://oamiumfmkkjrnowaummh.supabase.co";
 
-const SUPABASE_KEY = "sb_publishable_1YAgb1SKtCUB6WFCa9ux-Kg_89nDjo8T"
+const SUPABASE_KEY = "sb_publishable_1YAgb1SKtCUB6WFCa9uxKg_89nDjo8T"
 
 fetch(SUPABASE_URL + '/rest/v1/barbeiros?select=nome', {
   headers: { apikey: SUPABASE_KEY }
