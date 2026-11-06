@@ -1,1 +1,91 @@
 
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>West Cutz | Barber Shop</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101827;color:#fff;font-family:Arial,sans-serif}
+header{text-align:center;padding:35px 18px;background:#080d16}
+.logo{width:175px;height:175px;object-fit:contain;border-radius:50%;background:#fff}
+h1{font-size:34px;margin:15px 0 5px}
+.red{color:#d52d39}
+header p{color:#ccc}
+main{max-width:650px;margin:auto;padding:20px}
+h2{border-bottom:2px solid #c52b37;padding-bottom:10px;margin-top:30px}
+.card{background:#1c293c;padding:16px;margin:10px 0;border-radius:12px;display:flex;justify-content:space-between;gap:10px}
+.price{color:#f0c45b;font-weight:bold;white-space:nowrap}
+button{background:#c52b37;color:white;border:0;border-radius:9px;padding:14px;width:100%;font-size:16px;font-weight:bold;cursor:pointer}
+input,select{width:100%;padding:14px;margin:7px 0 15px;border-radius:8px;border:1px solid #526078;background:#1c293c;color:white;font-size:16px}
+label{display:block;margin-top:12px;color:#ddd}
+.note{color:#bbb;font-size:13px;line-height:1.5}
+footer{text-align:center;padding:25px;color:#aaa;background:#080d16}
+</style>
+</head>
+<body>
+<header>
+<img class="logo" src="logo.png" alt="West Cutz">
+<h1>WEST <span class="red">CUTZ</span></h1>
+<p>BARBER SHOP</p>
+<p>O teu estilo. A nossa dedicação.</p>
+</header>
+<main>
+<h2>Os nossos serviços</h2>
+<div class="card"><span>Corte social</span><span class="price">13€ · 25 min</span></div>
+<div class="card"><span>Corte degradê</span><span class="price">15€ · 35 min</span></div>
+<div class="card"><span>Barba</span><span class="price">9€ · 15 min</span></div>
+<div class="card"><span>Cabelo e barba</span><span class="price">20€ · 50 min</span></div>
+<div class="card"><span>Sobrancelha</span><span class="price">2€ · 5 min</span></div>
+
+<h2>Mensalidades</h2>
+<div class="card"><span>4 cortes de cabelo</span><span class="price">40€</span></div>
+<div class="card"><span>1 cabelo e barba + 3 barbas</span><span class="price">35€</span></div>
+<div class="card"><span>4 cabelos e barbas</span><span class="price">60€</span></div>
+
+<h2>Faz a tua marcação</h2>
+<form id="booking">
+<label>O teu nome</label>
+<input name="nome" required placeholder="Nome completo">
+<label>Telemóvel</label>
+<input name="telefone" type="tel" required placeholder="Número de telemóvel">
+<label>Escolhe o serviço</label>
+<select name="servico" required>
+<option value="">Selecionar serviço</option>
+<option>Corte social</option>
+<option>Corte degradê</option>
+<option>Barba</option>
+<option>Cabelo e barba</option>
+<option>Sobrancelha</option>
+</select>
+<label>Escolhe o barbeiro</label>
+<select name="barbeiro" required>
+<option value="">Selecionar barbeiro</option>
+<option>Pedro</option>
+<option>Chico</option>
+</select>
+<label>Data pretendida</label>
+<input name="data" type="date" required>
+<label>Hora pretendida</label>
+<input name="hora" type="time" required>
+<p class="note">O pedido fica sujeito à aprovação da West Cutz. A marcação só fica confirmada depois da nossa resposta.</p>
+<button type="submit">Pedir marcação</button>
+</form>
+<p id="feedback" class="note"></p>
+
+<h2>Horário</h2>
+<div class="card"><span>Terça a sábado</span><strong>10h – 20h</strong></div>
+<div class="card"><span>Domingo e segunda</span><strong>Encerrado</strong></div>
+</main>
+<footer>WEST CUTZ BARBER SHOP<br>Todos os direitos reservados</footer>
+<script>
+document.getElementById('booking').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('feedback').textContent='O formulário está preparado, mas as marcações ainda precisam de ser ligadas à base de dados. Ainda não foi enviado nenhum pedido.';
+});
+</script>
+</body>
+</html>
+
