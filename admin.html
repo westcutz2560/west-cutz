@@ -1,1 +1,65 @@
-<!-- Painel de administração West Cutz -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West Cutz | Administração</title>
+<style>
+body {
+  margin: 0;
+  background: #101827;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 24px;
+}
+main {
+  max-width: 450px;
+  margin: 60px auto;
+  text-align: center;
+}
+h1 { color: #fff; }
+input, button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 16px;
+}
+button {
+  background: #c52b37;
+  color: white;
+  border: none;
+}
+#mensagem { color: #f0c45b; }
+</style>
+</head>
+<body>
+<main>
+  <h1>WEST CUTZ</h1>
+  <h2>Painel de Administração</h2>
+  <p>Acesso exclusivo à barbearia</p>
+
+  <form id="login">
+    <input type="email" id="email"
+      placeholder="Email da barbearia" required>
+    <input type="password" id="senha"
+      placeholder="Palavra-passe" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p id="mensagem"></p>
+</main>
+<script>
+document.getElementById('login')
+  .addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('mensagem')
+      .textContent =
+      'Página preparada. Autenticação ainda não ligada.';
+  });
+</script>
+</body>
+</html>
+
